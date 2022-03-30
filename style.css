@@ -220,13 +220,15 @@ nav {
     margin: auto;
     font-size: 16px;
 }
+
 footer {
     background-color: var(--bg-color);
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
-    position: relative;
 }
+
+
 .socials {
     display: flex;
     flex-direction: column;
@@ -291,5 +293,27 @@ footer {
     font-weight: var(--bold-font);
     transition: var(--transition);
 }
+* {
+    box-sizing: border-box;
+}
 
+/* Create two equal columns that float next to each other */
+.column-2 {
+    float: left;
+    width: 45%;
+    padding: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 475px;
+    margin: 30px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    background-color: var(--secondary-shadow);
+    line-height: 1.5;
+}
+.large-profile {
+    background: url('images/Monica.jpg');
+    background-size: auto;
+    background-position: center;
+}
 
