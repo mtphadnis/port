@@ -114,19 +114,12 @@ nav {
     display: none;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    max-width: 60rem;
-    margin: auto;
+.bgimage {
+    height: 50vh;
+    background: url('images/MonicaPhadnis.png');
+    background-size: cover;
+    position: relative;
 }
-    .hero img {
-        height: 40rem;
-        width: 40rem;
-        border: 8px solid #8F7F8A;
-    }
 .bio {
     width: 30rem;
     padding: 0.625rem;
@@ -222,7 +215,8 @@ nav {
 }
 
 footer {
-    background-color: var(--bg-color);
+    background-image: url('images/90s.png');
+    background-repeat: repeat-x
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
