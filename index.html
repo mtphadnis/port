@@ -29,7 +29,7 @@
     <nav>
         <h1>Monica Phadnis</h1>
         <ul class="navigation">
-            <li><a href="index.html" class="nav-link">About</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="projects.html" class="nav-link">All Projects</a></li>
             <li><a href="gameprojects.html" class="nav-link">Games</a></li>
             <li><a href="worldbuilding.html" class="nav-link">Worldbuilding/Art</a></li>
@@ -44,10 +44,26 @@
     <br />
     <section class="bgimage" id="home">
         <div class="container-fluid">
-
-        </div>
         </div>
     </section>
+    </br>
+    <section class="hero" id="about">
+        <img src="images/Monica.JPG"
+             alt="jane-doe"
+             loading="lazy"
+             class="hero-img" />
+        <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title">About Me</h2>
+            <p class="bio-text">
+            <p>
+                I was born and raised in Rochester, NY and have a B.S. in Engineering and Management with a minor in Project Management from Clarkson University! I'm also about to graduate Pratt Institute's Game Design Program in May 2022. I also mentor on the FRC Robotics Team 191 (X-Cats) in my spare time, teaching kids HTML and Web Design.
+            </p>
+            <p> Some of my favorite games are Persona 5, Night in the Woods, Stardew Valley, and Sekiro. Feel free to contact me for anymore info, and thank you for checking out my portfolio!</p>
+            </p>
+        </div>
+    </section>
+
+
 
     <br />
 
@@ -58,17 +74,17 @@
     <section class="projects" id="projects">
         <h1 class="projects-title">Featured Projects</h1>
         <h2 class="projects-title"> Games</h2>
-        <div class="projects-container">          
-                <div class="project-container project-card">
-                    <img src="images/sealslide.png"
-                         alt="seal slide"
-                         loading="lazy"
-                         class="project-pic" />
+        <div class="projects-container">
+            <div class="project-container project-card">
+                <img src="images/sealslide.png"
+                     alt="seal slide"
+                     loading="lazy"
+                     class="project-pic" />
                 <h5 class="project-title">Seal Slide</h5>
                 <p class="project-details">
                     <a href="https://cjaxisa.itch.io/seal-slide" target="_blank" class="project-link">Play</a>
                 </p>
-                
+
             </div>
 
             <div class="project-container project-card">
@@ -80,7 +96,7 @@
                 <p class="project-details">
                     <a href="https://farmstandapple.itch.io/serious-and-subversive-final" target="_blank" class="project-link">Play</a>
                 </p>
-               
+
             </div>
             <div class="project-container project-card">
                 <img src="images/froggo.png"
@@ -91,7 +107,7 @@
                 <p class="project-details">
                     <a href="https://xanderwell.itch.io/leappondpt01" target="_blank" class="project-link">Check it Out</a>
                 </p>
-                
+
             </div>
 
         </div>
@@ -108,7 +124,7 @@
                     <p class="project-details">
                         <a href="Stellate.html" target="_blank" class="project-link">Check it Out</a>
                     </p>
-                    
+
                 </div>
                 <div class="projects-container">
                     <div class="project-container project-card">
@@ -140,26 +156,6 @@
         <div>
             <a href="projects.html" class="button">See All </a>
     </section>
-    <section>
-        <div class="container-fluid">
-            <div class="column-2">
-                <h1>About Me</h1>
-                <p>
-                    I was born and raised in Rochester, NY and have a B.S. in Engineering and Management with a minor in Project Management from Clarkson University! I'm also about to graduate Pratt Institute's Game Design Program in May 2022. I've always had an interest in games and art, however I wasn't able to fully explore this interest until my senior year at Clarkson through a study
-                    abroad program.
-                </p>
-                <p>
-                    I enjoy Level Design and Worldbuilding, and my work has been primarily developed in Unity and scripted C#. Creating immersive strange worlds that draw on my own life experiences but captivate players and readers of my work is super fun to me! My goal is to
-                    continously do this through what I make, whether its digital or analog. I want to inspire people to create things just like the games I love have inspired me.
-                </p>
-                <p> In my spare time, I like to read, run (granted the weather isn't terrible), hang out with my two cats, and play board games. I also mentor on the FRC Robotics Team 191 (X-Cats) in my spare time, teaching kids HTML and Web Design.</p>
-                <p> Some of my favorite games are Persona 5, Night in the Woods, Stardew Valley, and Sekiro. Feel free to contact me for anymore info, and thank you for checking out my portfolio!</p>
-            </div>
-            <div class="column-2 large-profile">
-            </div>
-        </div>
-    </section>
-
 
     <div class="socials">
         <a href="https://twitter.com/sekir0luver" target="_blank">
@@ -194,7 +190,27 @@
         </p>
     </footer>
     <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js">
+
+    </script>
+ 
+    <script>
+        // Nav hamburgerburger selections
+        const burger = document.querySelector("#burger-menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+        burger.addEventListener("click", () => {
+            ul.classList.toggle("show");
+        });
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach((link) =>
+            link.addEventListener("click", () => {
+                ul.classList.remove("show");
+            })
+        );
+   
+        </script>
 
     <!-- Ion icons scripts -->
     <script type="module"

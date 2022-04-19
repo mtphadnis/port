@@ -18,6 +18,64 @@
 }
 /* Variables end */
 
+@media screen and (max-width: 720px) {
+    /*changes reflects on screen with a width of 720px and below*/
+
+    nav {
+        padding: 1.5rem 1rem;
+    }
+        nav ul {
+            position: fixed;
+            background-color: var(--bg-color);
+            flex-direction: column;
+            top: 86px;
+            left: 10%;
+            width: 80%;
+            text-align: center;
+            transform: translateX(120%);
+            transition: transform 0.5s ease-in;
+        }
+
+            nav ul li {
+                margin: 8px;
+            }
+    .burger-menu {
+        display: block;
+        color: var(--primary-color);
+        font-size: 2rem;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+        .hero img {
+            height: 37.5rem;
+            width: 30rem;
+        }
+
+    .bio {
+        margin-top: -7rem;
+        width: 20.5rem;
+    }
+    .bgimage {
+        display: none;
+    }
+
+
+}
+
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -114,6 +172,9 @@ nav {
     display: none;
 }
 
+nav ul.show {
+    transform: translateX(0);
+}
 .bgimage {
     height: 50vh;
     background: url('images/MonicaPhadnis.png');
@@ -135,6 +196,34 @@ nav {
         line-height: var(--line-height);
         padding: 0.3rem 0;
     }
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+}
+.hero img {
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
 
 .more-about {
     background-color: var(--bg-color);
@@ -311,22 +400,3 @@ footer {
 }
 
 /* Create two equal columns that float next to each other */
-.column-2 {
-    float: left;
-    width: 45%;
-    padding: 40px;
-    padding-left: 70px;
-    padding-right: 70px;
-    height: 650px;
-    margin: 30px;
-    margin-right: 30px;
-    margin-bottom: 70px;
-    background-color: var(--secondary-shadow);
-    line-height: 1.5;
-}
-.large-profile {
-    background: url('images/Monica.JPG');
-    background-size: auto;
-    background-position: center;
-}
-
