@@ -21,24 +21,7 @@
 @media screen and (max-width: 720px) {
     /*changes reflects on screen with a width of 720px and below*/
 
-    nav {
-        padding: 1.5rem 1rem;
-    }
-        nav ul {
-            position: fixed;
-            background-color: var(--bg-color);
-            flex-direction: column;
-            top: 86px;
-            left: 10%;
-            width: 80%;
-            text-align: center;
-            transform: translateX(120%);
-            transition: transform 0.5s ease-in;
-        }
-
-            nav ul li {
-                margin: 8px;
-            }
+    
     .burger-menu {
         display: block;
         color: var(--primary-color);
@@ -53,6 +36,11 @@
     }
 
     .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        max-width: 68.75rem;
         margin-top: -4rem;
         flex-direction: column;
         gap: 0;
@@ -112,7 +100,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 1rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -131,14 +119,24 @@ nav {
             border-bottom: 2px solid var(--secondary-color);
         }
 
-    nav ul {
-        display: flex;
-        gap: 1.9rem;
-    }
+nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+}
 
     nav ul li {
-            font-weight: var(--bold-font);
-        }
+        font-weight: var(--bold-font);
+        margin: 8px;
+    }
+
+   
 
     nav h1 {
         color: var(--primary-color);
@@ -169,7 +167,7 @@ nav {
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
 nav ul.show {
