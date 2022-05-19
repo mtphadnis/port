@@ -42,7 +42,7 @@
 
         <section class="contact" id="contact">
             <h2>Get In Touch With Me</h2>
-           
+
             <div class="contact-form-container">
                 <p> email: monuphadnis@gmail.com | phone number: 5853093321</p>
                 <div class="contact-form">
@@ -115,16 +115,34 @@
                     <img src="images/github.png" alt="Github" loading="lazy" class="socicon" />
 
                 </a>
-</footer>
+        </footer>
         <!-- Website scripts -->
-        <script src="assets/js/app.js"></script>
+        <script src="assets/js/app.js">
+
+        </script>
+
+        <script>
+            const burger = document.querySelector("#burger-menu");
+            const ul = document.querySelector("nav ul");
+            const nav = document.querySelector("nav");
+            burger.addEventListener("click", () => {
+                ul.classList.toggle("show");
+            });
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach((link) =>
+                link.addEventListener("click", () => {
+                    ul.classList.remove("show");
+                })
+            );
+
+        </script>
 
         <!-- Ion icons scripts -->
         <script type="module"
                 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
                 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 
     </body>

@@ -123,7 +123,7 @@
                     <div class="container">
                         <h4><b>Mushrooms</b></h4>
                         <p>2021; Worldbuilding</p>
-                        
+
                     </div>
                     <a href="https://www.artstation.com/artwork/3q8mJo" target="_blank" class="project-link">View More</a>
                 </div>
@@ -148,7 +148,7 @@
                         <p>2020; Worldbuilding/Tabletop RPG. My first tabletop RPG, this game was based off of a project I madefor my Interactive Fiction class</p>
                         <a href="rpg.html" target="_blank" class="project-link">Check it Out</a>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="column">
@@ -201,7 +201,7 @@
                         </p>
                         <a href="lorebook.html" target="_blank" class="project-link">Check it Out</a>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="column">
@@ -211,7 +211,7 @@
                         <h4><b>Ocean Dive!</b></h4>
                         <p>2020; Tabletop Game. A tabletop game I made for my Collaborative Games class, with two other classmates. </p>
                         <a href="https://docs.google.com/document/d/e/2PACX-1vQLj3Zjb_MLWiovJXLC5a64KyIKGijAoNGeWLqgFw7XEGnDj6lYE1a71Wm2gI9tts5VEkMAffBgBSCB/pub" target="_blank" class="project-link">Rules</a>
-                      |
+                        |
                         <a href="https://www.artstation.com/artwork/WmYJZJ" target="_blank" class="project-link">Some of the Assets</a>
                     </div>
                 </div>
@@ -236,22 +236,22 @@
                         <p>2021; Worldbuilding. </p>
                         <a href="https://www.artstation.com/artwork/nE1vgO" target="_blank" class="project-link">Check it Out</a>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
-       
-        <div class="column">
-            <div class="card">
-                <img src="images/intothevoid.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                    <h4><b>Into the Void</b></h4>
-                    <p>2020; Narrative RPG. This was a game I made for my interactive fiction class- this was my first solo game!</p>
+
+            <div class="column">
+                <div class="card">
+                    <img src="images/intothevoid.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Into the Void</b></h4>
+                        <p>2020; Narrative RPG. This was a game I made for my interactive fiction class- this was my first solo game!</p>
+                    </div>
+
+                    <a href="https://farmstandapple.itch.io/into-the-void" target="_blank" class="project-link">Play</a>
                 </div>
-               
-                <a href="https://farmstandapple.itch.io/into-the-void" target="_blank" class="project-link">Play</a>
             </div>
-        </div>
         </div>
         <div class="row col d-flex justify-content-center">
 
@@ -285,7 +285,7 @@
                         <p>2022; Done for my portfolio class. We were tasked with coming up with business cards and logos to capture our design philosophy.</p>
                     </div>
                     <a href="https://www.artstation.com/artwork/LeOgAv" target="_blank" class="project-link">About</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -294,7 +294,7 @@
             <p class="copy">&copy; Copyright 2022</p>
             <br />
             <p class="copy">
-                 Built with &#x2661; by
+                Built with &#x2661; by
                 <br />
                 <a href="https://twitter.com/sekir0luver" target="_blank">Monica Phadnis</a>
             </p>
@@ -323,13 +323,33 @@
                 </a>
         </footer>
         <!-- Website scripts -->
-        <script src="assets/js/app.js"></script>
+        <script src="assets/js/app.js">
+
+        </script>
+
+        <script>
+            const burger = document.querySelector("#burger-menu");
+            const ul = document.querySelector("nav ul");
+            const nav = document.querySelector("nav");
+            burger.addEventListener("click", () => {
+                ul.classList.toggle("show");
+            });
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach((link) =>
+                link.addEventListener("click", () => {
+                    ul.classList.remove("show");
+                })
+            );
+
+        </script>
 
         <!-- Ion icons scripts -->
         <script type="module"
                 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
                 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
     </body>
 </html>

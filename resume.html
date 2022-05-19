@@ -46,7 +46,8 @@
     </p>
     <h4 align="center">
         <a href="images/resume.png" download="Monica Phadnis's Resume">
-            Download My Resume</a>
+            Download My Resume
+        </a>
     </h4>
     <footer>
         <p class="copy">&copy; Copyright 2022</p>
@@ -77,17 +78,35 @@
                 <img src="images/github.png" alt="Github" loading="lazy" class="socicon" />
 
             </a>
-           
+
     </footer>
     <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js">
+
+    </script>
+
+    <script>
+        const burger = document.querySelector("#burger-menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+        burger.addEventListener("click", () => {
+            ul.classList.toggle("show");
+        });
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach((link) =>
+            link.addEventListener("click", () => {
+                ul.classList.remove("show");
+            })
+        );
+
+    </script>
 
     <!-- Ion icons scripts -->
     <script type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 </body>
 </html>
